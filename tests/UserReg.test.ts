@@ -7,6 +7,7 @@ test.use({
 });
 
 test.only("UserReg test", async ({ page }) => {
+  
   await page.goto("https://192.168.1.33:4442/home/my-apps");
   await page.getByPlaceholder("Enter username").click();
   await page.getByPlaceholder("Enter username").fill("Admin");
