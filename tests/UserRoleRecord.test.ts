@@ -26,7 +26,7 @@ test("Delete Role Test", async ({ page }) => {
   await page.getByRole("button", { name: "Submit" }).click();
   await page.getByRole("button", { name: "View User Roles" }).click();
   await page.getByPlaceholder("Choose a role...").click();
-  await page.getByPlaceholder("Choose a role...").fill("test");
+  await page.getByPlaceholder("Choose a role...").fill("test42");
   await page.getByLabel("test42").click();
   await page.getByPlaceholder("Enter role name").click();
   await page.getByPlaceholder("Enter role name").fill("test43");

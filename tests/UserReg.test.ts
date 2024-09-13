@@ -6,7 +6,7 @@ test.use({
   },
 });
 
-test.only("UserReg test", async ({ page }) => {
+test("UserReg test", async ({ page }) => {
   await page.goto("https://192.168.1.33:4442/home/my-apps");
   await page.getByPlaceholder("Enter username").click();
   await page.getByPlaceholder("Enter username").fill("Admin");
@@ -46,6 +46,7 @@ test.only("UserReg test", async ({ page }) => {
   await page.getByRole('button', { name: 'View Users' }).click();
   await page.getByPlaceholder('Choose an user...').click();
   await page.getByPlaceholder('Choose an user...').fill('Test_User_02');
+  await page.locator("//a[@aria-label='Test_User_02']").click();
   await page.getByRole("button", { name: "Delete User" }).click();
   await page.getByRole('button', { name: 'Yes' }).click({timeout: 10000});
-});
+ });

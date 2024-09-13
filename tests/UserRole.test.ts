@@ -40,5 +40,5 @@ test('test', async ({ page }) => {
   await page.getByPlaceholder('Choose a role...').fill('tes');
   await page.getByLabel('test_43').click();
   await page.getByRole('button', { name: 'Delete Role' }).click();
-  await page.getByRole('button', { name: 'Yes' }).click();
+  await page.getByRole('button', { name: 'Yes' }).click({timeout: 10000});
 });
